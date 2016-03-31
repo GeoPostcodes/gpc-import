@@ -1,4 +1,9 @@
 
+-- GeoPostcodes table definition
+-- MySQL version
+--
+-- (C) 2016 GeoData Ltd
+
 -- Drop old tables if needed
 
 -- DROP TABLE IF EXISTS geopc_places;
