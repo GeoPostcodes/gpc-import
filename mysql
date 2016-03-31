@@ -1,0 +1,107 @@
+# GeoPostcodes table definition
+# MySQL version
+#
+# (C) 2016 GeoData Ltd
+
+# Drop old tables if needed
+
+# DROP TABLE IF EXISTS GeoPC_Places;
+# DROP TABLE IF EXISTS GeoPC_Streets;
+# DROP TABLE IF EXISTS GeoPC_Business;
+# DROP TABLE IF EXISTS GeoPC_Regions;
+
+# Table REGIONS
+ 
+CREATE TABLE GeoPC_Regions (
+  ISO varchar(2) NOT NULL,
+  Country varchar(50) NOT NULL,
+  Language varchar(2) NOT NULL,
+  Level smallint(8) NOT NULL,
+  Type varchar(50) NOT NULL,
+  Name varchar(80) NOT NULL,
+  Region1 varchar(80),
+  Region2 varchar(80),
+  Region3 varchar(80),
+  Region4 varchar(80),
+  ISO2 varchar(10),
+  FIPS varchar(10),
+  NUTS varchar(12),
+  HASC varchar(12),
+  STAT varchar(20)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+# Table PLACES
+ 
+CREATE TABLE GeoPC_Places (
+  ISO varchar(2) NOT NULL,
+  Country varchar(50) NOT NULL,
+  Language varchar(2) NOT NULL,
+  ID bigint(20) NOT NULL,
+  Region1 varchar(80),
+  Region2 varchar(80),
+  Region3 varchar(80),
+  Region4 varchar(80),
+  Locality varchar(80),
+  Postcode varchar(15),
+  Suburb varchar(80),
+  Latitude double,
+  Longitude double,
+  Elevation integer,
+  ISO2 varchar(10),
+  FIPS varchar(10),
+  NUTS varchar(12),
+  HASC varchar(12),
+  STAT varchar(20),
+  Timezone varchar(30),
+  UTC varchar(10),
+  DST varchar(10),
+  PRIMARY KEY (Language, ID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+# Table STREETS
+ 
+CREATE TABLE GeoPC_Streets (
+  ISO varchar(2) NOT NULL,
+  Country varchar(50) NOT NULL,
+  Language varchar(2) NOT NULL,
+  ID bigint(20) NOT NULL,
+  Region1 varchar(80),
+  Region2 varchar(80),
+  Region3 varchar(80),
+  Region4 varchar(80),
+  Locality varchar(80),
+  Postcode varchar(15),
+  Suburb varchar(80),
+  Street varchar(100),
+  `Range` varchar(50),
+  Building varchar(80),
+  Latitude double,
+  Longitude double,
+  Elevation integer,
+  ISO2 varchar(10),
+  FIPS varchar(10),
+  NUTS varchar(12),
+  HASC varchar(12),
+  STAT varchar(20),
+  Timezone varchar(30),
+  UTC varchar(10),
+  DST varchar(10),
+  PRIMARY KEY (Language, ID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+# Table BUSINESS
+ 
+CREATE TABLE GeoPC_Business (
+  ISO varchar(2) NOT NULL,
+  Country varchar(50) NOT NULL,
+  Language varchar(2) NOT NULL,
+  ID bigint(20) NOT NULL,
+  Region1 varchar(80),
+  Region2 varchar(80),
+  Region3 varchar(80),
+  Region4 varchar(80),
+  Entity varchar(100),
+  Postcode varchar(15),
+  Info varchar(100),
+  PRIMARY KEY (Language, ID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
