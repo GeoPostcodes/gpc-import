@@ -2,7 +2,7 @@
 GeoPostcodes table definitions and import scripts.
 
 <br>
-##### Regions table
+#### Regions table
 
 <table class="table table-bordered table-striped">
 <thead>
@@ -28,7 +28,7 @@ GeoPostcodes table definitions and import scripts.
 </table>
 
 <br>
-##### Places table
+#### Places table
 
 <table class="table table-bordered table-striped">
 <thead>
