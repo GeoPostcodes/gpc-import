@@ -105,3 +105,4 @@ CREATE TABLE GeoPC_Business (
   Info varchar(100),
   PRIMARY KEY (Language, ID)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
