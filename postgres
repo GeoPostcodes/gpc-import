@@ -122,3 +122,4 @@ CREATE TABLE geopc_business
 WITH (
   OIDS=FALSE
 );
+
